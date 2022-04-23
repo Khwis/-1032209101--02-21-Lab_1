@@ -1,0 +1,112 @@
+linux
+[wardkhouiss@wardkhwiss ~]$ dmesg | grep Linux
+[    0.000000] Linux version 5.14.10-300.fc35.x86_64 (mockbuild@bkernel01.iad2.fedoraproject.org) (gcc (GCC) 11.2.1 20210728 (Red Hat 11.2.1-1), GNU ld version 2.37-10.fc35) #1 SMP Thu Oct 7 20:48:44 UTC 2021
+[    0.298511] SELinux:  Initializing.
+[    0.538884] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.538884] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.538885] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.615269] pps_core: LinuxPPS API ver. 1 registered
+[    0.693555] Linux agpgart interface v0.103
+[    0.757514] usb usb1: Manufacturer: Linux 5.14.10-300.fc35.x86_64 ohci_hcd
+[    7.268823] SELinux:  policy capability network_peer_controls=1
+[    7.268826] SELinux:  policy capability open_perms=1
+[    7.268827] SELinux:  policy capability extended_socket_class=1
+[    7.268827] SELinux:  policy capability always_check_network=0
+[    7.268828] SELinux:  policy capability cgroup_seclabel=1
+[    7.268828] SELinux:  policy capability nnp_nosuid_transition=1
+[    7.268829] SELinux:  policy capability genfs_seclabel_symlinks=0
+[    7.287560] systemd[1]: Successfully loaded SELinux policy in 112.904ms.
+[   11.904241] 16:45:03.643794 main     OS Product: Linux
+
+CPU
+
+[wardkhouiss@wardkhwiss ~]$ dmesg | grep -i "cpu0"
+[    0.000000] kvm-clock: cpu 0, msr 8dc01001, primary cpu clock
+[    0.001456] CPU MTRRs all blank - virtualized system.
+[    0.005189] ACPI: SSDT 0x00000000DFFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+[    0.118162] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+[    0.123281] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:1 nr_cpu_ids:1 nr_node_ids:1
+[    0.126278] percpu: Embedded 55 pages/cpu s188416 r8192 d28672 u2097152
+[    0.126285] pcpu-alloc: s188416 r8192 d28672 u2097152 alloc=1*2097152
+[    0.126288] pcpu-alloc: [0] 0
+[    0.126312] kvm-guest: PV spinlocks disabled, single CPU
+[    0.264964] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.282521] rcu: RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=1.
+[    0.282539] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.286007] random: crng done (trusting CPU's manufacturer)
+[    0.414467] smpboot: CPU0: Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz (family: 0x6, model: 0xa5, stepping: 0x2)
+[    0.414467] Performance Events: unsupported p6 CPU model 165 no PMU driver, software events only.
+[    0.414467] smp: Bringing up secondary CPUs ...
+[    0.414467] smp: Brought up 1 node, 1 CPU
+[    0.414865] cpuidle: using governor menu
+[    0.536344] cryptd: max_cpu_qlen set to 1000
+[    0.765736] intel_pstate: CPU model not supported
+
+Memory
+
+[wardkhouiss@wardkhwiss ~]$ dmesg | grep -i Memory
+[    0.005192] ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
+[    0.005194] ACPI: Reserving DSDT table memory at [mem 0xdfff0470-0xdfff2794]
+[    0.005195] ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+[    0.005196] ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+[    0.005196] ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff0293]
+[    0.005197] ACPI: Reserving SSDT table memory at [mem 0xdfff02a0-0xdfff046b]
+[    0.109402] Early memory node ranges
+[    0.118185] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.118187] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.118188] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.118189] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.118190] PM: hibernation: Registered nosave memory: [mem 0xdfff0000-0xdfffffff]
+[    0.118191] PM: hibernation: Registered nosave memory: [mem 0xe0000000-0xfebfffff]
+[    0.118192] PM: hibernation: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+[    0.118193] PM: hibernation: Registered nosave memory: [mem 0xfec01000-0xfedfffff]
+[    0.118193] PM: hibernation: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+[    0.118194] PM: hibernation: Registered nosave memory: [mem 0xfee01000-0xfffbffff]
+[    0.118195] PM: hibernation: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+[    0.264853] Memory: 3940952K/4193848K available (16393K kernel code, 3531K rwdata, 10388K rodata, 2872K init, 4908K bss, 252636K reserved, 0K cma-reserved)
+[    0.310748] Freeing SMP alternatives memory: 44K
+[    0.414467] x86/mm: Memory block size: 128MB
+[    0.693542] Non-volatile memory driver v1.3
+[    3.873883] Freeing initrd memory: 58176K
+[    3.892243] Freeing unused decrypted memory: 2036K
+[    3.892494] Freeing unused kernel image (initmem) memory: 2872K
+[    3.893770] Freeing unused kernel image (text/rodata gap) memory: 2036K
+[    3.894109] Freeing unused kernel image (rodata/data gap) memory: 1900K
+[   10.168561] [TTM] Zone  kernel: Available graphics memory: 2004138 KiB
+[   10.168676] [drm] Max dedicated hypervisor surface memory is 507904 kiB
+[   10.168677] [drm] Maximum display memory size is 16384 kiB
+[wardkhouiss@wardkhwiss ~]$
+
+Hyber
+
+[wardkhouiss@wardkhwiss ~]$ dmesg | grep -i virtual
+[    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[    0.001456] CPU MTRRs all blank - virtualized system.
+[    0.118197] Booting paravirtualized kernel on KVM
+[    1.312759] usb 1-1: Manufacturer: VirtualBox
+[    1.335654] input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:80EE:0021.0001/input/input5
+[    1.335743] hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+[    3.941558] systemd[1]: Detected virtualization oracle.
+[    4.033292] systemd[1]: Starting Setup Virtual Console...
+[    4.734279] input: VirtualBox mouse integration as /devices/pci0000:00/0000:00:04.0/input/input7
+[    7.454937] systemd[1]: Detected virtualization oracle.
+[    8.573178] systemd[1]: Created slice Virtual Machine and Container Slice.
+[    8.748490] systemd[1]: Starting Setup Virtual Console...
+[wardkhouiss@wardkhwiss ~]$
+
+root partition
+
+
+[wardkhouiss@wardkhwiss ~]$ df -Th
+Filesystem          Type      Size  Used Avail Use% Mounted on
+devtmpfs            devtmpfs  1.9G     0  1.9G   0% /dev
+tmpfs               tmpfs     2.0G  9.2M  2.0G   1% /dev/shm
+tmpfs               tmpfs     783M  9.6M  774M   2% /run
+/dev/sr0            iso9660   1.9G  1.9G     0 100% /run/initramfs/live
+/dev/mapper/live-rw ext4      7.3G  5.4G  2.0G  74% /
+tmpfs               tmpfs     2.0G  124K  2.0G   1% /tmp
+vartmp              tmpfs     2.0G     0  2.0G   0% /var/tmp
+tmpfs               tmpfs     392M  140K  392M   1% /run/user/1000
+tmpfs               tmpfs     392M  928K  391M   1% /run/user/1001
+[wardkhouiss@wardkhwiss ~]$
+
